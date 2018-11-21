@@ -63,12 +63,14 @@ public class Vendedor extends Empleado{
 	public  String toString()
 	{
 		StringBuilder sb = new StringBuilder();
+		sb.append("\n________________________________________________________________________________\n");
+
 		sb.append(super.toString()+"\n");
 		sb.append("Puesto:" + this.PUESTO + "\n");
 		sb.append("area:" + this.areaVenta + "\n");
 		sb.append("cel: " + this.cel + "\n");
 		sb.append("Coche de la Empresa" + this.empresaCar.toString());
-		
+		sb.append("supervisor: " + this.supervisor.nombre + " " + this.supervisor.apellido +  "\n");
 		
 		
 		return sb.toString();

@@ -76,7 +76,7 @@ public abstract class Empleado {
 		sb.append("antiguedad: " + this.antiguedad + "\n");
 		sb.append("tel: " + this.tel + "\n");
 		sb.append("salario: " + this.salario + "\n");
-		sb.append("supervisor: " + this.supervisor + "\n");
+		
 		
 		return sb.toString();
 		

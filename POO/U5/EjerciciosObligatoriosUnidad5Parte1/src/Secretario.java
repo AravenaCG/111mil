@@ -39,10 +39,13 @@ public class Secretario extends Empleado {
 	public String toStrign()
 	{
 		StringBuilder sb = new StringBuilder();
+		sb.append("\n________________________________________________________________________________\n");
+
 		sb.append(super.toString()+"\n");
 		sb.append("Puesto:" + this.PUESTO + "\n");
 		sb.append("Despacho:" + this.despacho + "\n");
 		sb.append("FAX: " + this.numFax + "\n");
+		sb.append("supervisor: " + this.supervisor.nombre + " " + this.supervisor.apellido +  "\n");
 		
 		
 		return sb.toString();

@@ -10,9 +10,10 @@ public class ProbarEmpresa {
 		Coche autito4 = new Coche ("AUDI", "j4", "44565498");
 		Coche autito5 = new Coche ("AUDI", "j5", "44565498");
 		
-		
-		Secretario lol = new Secretario("roberto", "ordoñez", 123124124, "lope de vega", 5, "45778888", 18000, null, "tres", "4545");
-		JefeDeZona jefe =  new JefeDeZona("Jefe D", "Zona", 3213211, "una calle", 4, "444444",459876 , null, lol, null, autito1, 45);
+		JefeDeZona jefe1 =  new JefeDeZona("Jefe1111 D", "Zona", 3213211, "una calle", 4, "444444",459876 , null, null, null, autito5, 45);
+
+		Secretario lol = new Secretario("roberto", "ordoñez", 123124124, "lope de vega", 5, "45778888", 18000, jefe1, "tres", "4545");
+		JefeDeZona jefe =  new JefeDeZona("Jefe D", "Zona", 3213211, "una calle", 4, "444444",459876 , jefe1, lol, null, autito1, 45);
 
 		Vendedor vend1 = new Vendedor("vende1","apel",11111111,"calle 1",2,"444444",123124,jefe,autito2,"12312312",3,5);
 		Vendedor vend2 = new Vendedor("vende2","apel",11111111,"calle 1",2,"444444",123124,jefe,autito3,"12312312",3,5);
@@ -25,24 +26,30 @@ public class ProbarEmpresa {
 		
 		
 		System.out.print("------------------------SECRETARIO--------------------------------------");
+		System.out.print("\n________________________________________________________________________________\n");
+
 		
 		System.out.print(lol.toStrign());
 		
 		System.out.print("-------------------------VENDEDOR-------------------------------------");
+		System.out.print("\n________________________________________________________________________________\n");
 		
 		System.out.print(vend1.toString());
 
 		System.out.print("-------------------------JEFE-------------------------------------");
+		System.out.print("\n________________________________________________________________________________\n");
 		
 		System.out.print(jefe.toStrign());
 		
 		
 		System.out.print("-------------------------BAJA VENDEDOR-------------------------------------");
+		System.out.print("\n________________________________________________________________________________\n");
 
 		jefe.bajaVendedor(vend3);
 		
 		ArrayList<Vendedor> list = new ArrayList<Vendedor>();
 		list = jefe.getListaVendedores();
+		System.out.print("\n_____________________________IMPRIME SIN EL 3ER VENDEDOR_____________________________\n");
 		
 		System.out.print(list.toString());
 		

@@ -73,13 +73,17 @@ public class JefeDeZona extends Empleado{
 	public String toStrign()
 	{
 		StringBuilder sb = new StringBuilder();
+		sb.append("\n________________________________________________________________________________\n");
 		sb.append(super.toString()+"\n");
 		sb.append("Puesto:" + this.PUESTO + "\n");
 		sb.append("Despacho:" + this.despacho + "\n");
 		sb.append("Auto de la Empresa: " + this.auto.toString() + "\n");
 		sb.append("Secretario: " + this.sec.toStrign());
+		sb.append("supervisor: " + this.supervisor.nombre + " " + this.supervisor.apellido +  "\n");
 		for (Vendedor vend : this.listaVendedores) {
-		    sb.append(vend.toString());
+			sb.append("****************************************************************************\n");
+			sb.append(vend.toString());
+			sb.append("****************************************************************************\n");
 		}
 		
 		return sb.toString();
